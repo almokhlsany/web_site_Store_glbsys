@@ -18,18 +18,18 @@
 
 	  <div class="col-xl-6 col-lg-6 d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
 		<div class="box-heading" data-aos="fade-up">
-		  <h4>من نحن</h4>
-		  <h3>تأسست كواحدة من أكبر مرافق تصنيع الزجاج والألمنيوم في المملكة العربية السعودية</h3>
-		  <p>تم تشكيل شركتنا على مجموعة من المعايير والمبادئ التوجيهية الدولية الصارمة التي مكنتنا من وضع أنفسنا بشكل فريد في السوق.
+		  <h4>  @lang('site.About') </h4>
+		  <h3> @lang('site.des_4')</h3>
+		  <p>@lang('site.des_5')
 
-			من خلال مجموعتنا الشاملة من الخدمات ، نحن قادرون على توفير قدرات استثنائية في التصميم والتصنيع والتوزيع بالإضافة إلى مجموعة لا مثيل لها من منتجات الزجاج والألمنيوم</p>
+		 </p>
 		</div>
-
+	
         @foreach($aboutusData as $data)
 		<div class="icon-box" data-aos="fade-up">
 		  <div class="icon"><i class="bx bx-atom"></i></div>
-		  <h4 class="title"><a href="#">{{ $data->name_ar}} </a></h4>
-		  <p class="description"> {{ $data->title_ar}} .</p>
+		  <h4 class="title"><a href="#">{{ $data->{'name_'.app()->getLocale()}  }} </a></h4>
+		  <p class="description"> 	{{ $data->{'title_'.app()->getLocale()}  }}</p>
 		</div>
         @endforeach
 
@@ -90,22 +90,22 @@
 
 	  <div class="col-lg-3 col-6 text-center">
 		<span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-		<p>مشروع سنوياً</p>
+		<p> @lang('site.project_annually')</p>
 	  </div>
 
 	  <div class="col-lg-3 col-6 text-center">
 		<span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-		<p>انتاج يومي</p>
+		<p> @lang('site.daily_product')</p>
 	  </div>
 
 	  <div class="col-lg-3 col-6 text-center">
 		<span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-		<p>عميل جديد</p>
+		<p> @lang('site.New_customer')</p>
 	  </div>
 
 	  <div class="col-lg-3 col-6 text-center">
 		<span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-		<p>مصنع </p>
+		<p>@lang('site.factory') </p>
 	  </div>
 
 	</div>
@@ -118,9 +118,9 @@
   <div class="container" data-aos="zoom-in">
 
 	<div class="text-center">
-	  <h3>جودة البناء. خدمة صادقة. قيمة كبيرة</h3>
-	  <p>يعمل فريقنا المحترف على زيادة الإنتاجية وفعالية التكلفة في السوق</p>
-	  <a class="cta-btn" href="#contact">اطلب الآن</a>
+	  <h3>@lang('site.des_6')</h3>
+	  <p> @lang('site.des_7') </p>
+	  <a class="cta-btn" href="#contact"> @lang('site.Ordernow')</a>
 	</div>
 
   </div>
@@ -131,9 +131,9 @@
   <div class="container">
 
 	<div class="section-title" data-aos="zoom-in">
-	  <h2>خدماتنا</h2>
-	  <h3>جميع <span>الخدمات</span></h3>
-	  <p>نحن نقدم خدمات للافراد والشركات و القطاع الحكومي بضمان وجودة عالية</p>
+	  <h2>@lang('site.OurServices')</h2>
+	  <h3>@lang('site.all') <span>@lang('site.Services')</span></h3>
+	  <p>@lang('site.des_8') </p>
 	</div>
 
 
@@ -143,8 +143,8 @@
 	  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
 		<div class="icon-box" data-aos="zoom-in" data-aos-delay="500">
 		  <div class="icon"><i class="bx bx-arch"></i></div>
-		  <h4><a href="#">{{ $data->name_ar}} </a></h4>
-		  <p>{{ $data->desc_ar}}</p>
+		  <h4><a href="#">{{ $data->{'name_'.app()->getLocale()}  }}</a></h4>
+		  <p> {{ $data->{'desc_'.app()->getLocale()}  }}</p>
 		</div>
 	  </div>
       @endforeach
@@ -160,9 +160,9 @@
   <div class="container">
 
 	<div class="section-title" data-aos="zoom-in">
-	  <h2>اعمالنا</h2>
-	  <h3>ابرز <span>اعمالنا</span></h3>
-	  <p>تم بفضل الله وحمده العمل مع اكثر من جهه من تركيب زجاج والمونيوم ومشاريع اخرى.</p>
+	  <h2>@lang('site.OurProjects')</h2>
+	  <h3>@lang('site.Highlights') <span>@lang('site.OurProjects')</span></h3>
+	  <p>@lang('site.des_9')</p>
 	</div>
 
 	<div class="row">
@@ -170,7 +170,7 @@
 		<ul id="portfolio-flters">
 		  <li data-filter="*" class="filter-active">الكل</li>
 		  @foreach($allCat as $data)
-		  <li data-filter=".filter-{{ $data->id}} ">{{ $data->name_ar}}  </li>
+		  <li data-filter=".filter-{{ $data->id}} ">{{ $data->{'name_'.app()->getLocale()}  }}  </li>
 		  @endforeach
 		</ul>
 	  </div>
@@ -182,11 +182,11 @@
 	  <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $data->category_id}}">
 		<img src="{{ URL ::to ('public/upload/'.$data->image)}}" class="img-fluid" alt="">
 		<div class="portfolio-info">
-		  <h4>{{ $data->name_ar}}</h4>
-		  <p>{{ $data->desc_ar}}</p>
+		  <h4>{{ $data->{'name_'.app()->getLocale()}  }}</h4>
+		  <p>{{ $data->{'desc_'.app()->getLocale()}  }}</p>
 		  <a href="{{ URL ::to ('public/upload/'.$data->image)}}" 
-		  data-gallery="{{ $data->name_ar}}" class="portfolio-lightbox preview-link" 
-		  title="{{ $data->name_ar}}"><i class="bx bx-plus"></i></a>
+		  data-gallery="{{ $data->{'name_'.app()->getLocale()}  }}" class="portfolio-lightbox preview-link" 
+		  title="{{ $data->{'name_'.app()->getLocale()}  }}"><i class="bx bx-plus"></i></a>
 		  <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
 		</div>
 	  </div>
@@ -415,11 +415,11 @@
 		<li data-aos="fade-up">
 		  <i class="bx bx-help-circle icon-help"></i>
 		   <a data-bs-toggle="collapse" class="collapse" 
-		   data-bs-target="#faq-list-{{ $data->id }}">   {{ $data->question_ar }}
+		   data-bs-target="#faq-list-{{ $data->id }}"> {{ $data->{'question_'.app()->getLocale()}  }}  
 		   <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
 		  <div id="faq-list-{{ $data->id }}" class="collapse show" data-bs-parent=".faq-list">
 			<p>
-			{{ $data->answer_ar }} 
+			 {{ $data->{'answer_'.app()->getLocale()}  }} 
 			</p>
 		  </div>
 		</li>
@@ -459,7 +459,7 @@
 		  <div class="address">
 			<i class="bi bi-geo-alt"></i>
 			<h4>العنوان:</h4>
-			<p>  {{$settingData->address_ar}}  </p>
+			<p>  {{ $data->{'address_'.app()->getLocale()}  }}    </p>
 		  </div>
 
 		  <div class="email">

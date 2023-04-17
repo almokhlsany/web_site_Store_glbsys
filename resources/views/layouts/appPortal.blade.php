@@ -81,11 +81,11 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">@lang('site.Homepage')</a></li>
-          <li><a class="nav-link scrollto" href="#about"> @lang('site.About') </a></li>
-          <li><a class="nav-link scrollto" href="#services">خدماتنا</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">اعمالنا</a></li>
-          <li><a class="nav-link scrollto" href="#team">فريق العمل</a></li>
+          <li><a class="nav-link scrollto active" href="{{ route('/homepage', app()->getLocale()) }}">@lang('site.Homepage')</a></li>
+          <li><a class="nav-link scrollto" href="{{ route('/homepage', app()->getLocale()) }}#about"> @lang('site.About') </a></li>
+          <li><a class="nav-link scrollto" href="{{ route('/homepage', app()->getLocale()) }}#services">@lang('site.OurServices')</a></li>
+          <li><a class="nav-link scrollto " href="{{ route('/homepage', app()->getLocale()) }}#portfolio">@lang('site.OurProjects')</a></li>
+          <li><a class="nav-link scrollto" href="{{ route('/homepage', app()->getLocale()) }}#team"> @lang('site.team')</a></li>
           <div class=" nav-item dropdown">
                                                <a class=" dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     {{ app()-> getLocale()=='ar'?'عربي':'English'}}
@@ -111,7 +111,7 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li-->
-          <li><a class="nav-link scrollto" href="#contact">تواصل معنا</a></li>
+          <li><a class="nav-link scrollto" href="#contact"> @lang('site.Connectus')</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -121,9 +121,9 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero">
     <div class="hero-container" data-aos="fade-up">
-      <h1>  مرحبا بكم فى سابقه الحديث للزجاج و الألومنيوم     </h1>
-      <h2>متخصصين في صناعة الزجاج و الالمنيوم بأعلى معايير الجودة </h2>
-      <a href="#contact" class="btn-get-started scrollto">اطلب الآن</a>
+      <h1>  @lang('site.des_1')    </h1>
+      <h2>@lang('site.des_2') </h2>
+      <a href="#contact" class="btn-get-started scrollto"> @lang('site.Ordernow')</a>
     </div>
   </section><!-- End Hero -->
 
@@ -143,8 +143,8 @@
 
         <div class="row  justify-content-center">
           <div class="col-lg-6">
-            <h3>اشترك معانا</h3>
-            <p>استمتع بالمزيد من الاخبار والاعلانات الخاصه بمصنع سابقه الحديث للزجاج والالمونيوم</p>
+            <h3> @lang('site.Subscribeus') </h3>
+            <p>   @lang('site.des_3') </p>
           </div>
         </div>
 
@@ -152,7 +152,7 @@
           <div class="col-lg-6">
             <form action="" method="post">
               <input type="email" name="email" 
-              placeholder="البريد الالكترونى" required><input type="submit" value="اشترك الان">
+              placeholder="@lang('site.email')  " required><input type="submit" value=" @lang('site.Subscribeus') ">
             </form>
           </div>
         </div>
@@ -170,14 +170,14 @@
 
     <div class="container footer-bottom clearfix">
       <div class="copyright">
-        &copy; جميع الحقوق محفوظه <strong><span>اسم الشركه </span></strong>. 
+      @lang('site.copyright')  <strong><span> @lang('site.CompanyName') </span></strong>. 
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/ -->
-        صمم بواسطه  <a href="#">اسم الشركه</a>
+          @lang('site.Designedby')  <a href="#"> @lang('site.CompanyName') </a>
       </div>
     </div>
   </footer><!-- End Footer -->

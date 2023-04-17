@@ -31,7 +31,21 @@ use App\Http\Controllers\Admin\ListController;
 Route::get('/', [IndexController::class, 'Home']);
 Route::post('/contactUsForm', [IndexController::class, 'ContactUsForm']);
 
+//Language
 
+
+Route::group(['prefix' => '{locale}','where' => ['locale' => '[a-z]{2}'],
+'middleware' => 'setLocale'],
+ function () {
+    Route::get('/', function () {
+        return view('Home');
+       })->name('/homepage');
+
+
+
+
+  
+});
 //Admin
 Auth::routes();
 Route::group(['prefix' => 'admin'], function () {
