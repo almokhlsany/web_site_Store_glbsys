@@ -81,11 +81,19 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">الرئيسية</a></li>
-          <li><a class="nav-link scrollto" href="#about">من نحن </a></li>
+          <li><a class="nav-link scrollto active" href="#hero">@lang('site.Homepage')</a></li>
+          <li><a class="nav-link scrollto" href="#about"> @lang('site.About') </a></li>
           <li><a class="nav-link scrollto" href="#services">خدماتنا</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">اعمالنا</a></li>
           <li><a class="nav-link scrollto" href="#team">فريق العمل</a></li>
+          <div class=" nav-item dropdown">
+                                               <a class=" dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    {{ app()-> getLocale()=='ar'?'عربي':'English'}}
+                                               </a>
+                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                  <a class="dropdown-item"  href="{{url(app()->getLocale()=='ar'?'en':'ar')}}">{{ app()-> getLocale()=='ar'?'English':'عربي'}}</a>
+                                                </div>
+                                               </div>
           <!---li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -177,6 +185,9 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>      <script src="{{ asset('public/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{ asset('public/portal/assets/vendor/purecounter/purecounter_vanilla.js')}}"></script>
   <script src="{{ asset('public/portal/assets/vendor/aos/aos.js')}}"></script>
   <script src="{{ asset('public/portal/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
