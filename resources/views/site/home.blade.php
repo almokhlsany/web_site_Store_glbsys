@@ -298,11 +298,11 @@
 		<div class="swiper-slide">
 		  <div class="testimonial-item">
 			<img src="{{ asset('public/portal/assets/img/testimonials/testimonials-5.jpg')}}" class="testimonial-img" alt="">
-			<h3>عميل 1</h3>
-			<h4> مدير شركه </h4>
+			<h3> @lang('site.Customer')</h3>
+			<h4> @lang('site.manager')  </h4>
 			<p>
 			  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-			 من المصانع الاكثر من رائعه التى تم التعامل معاها
+			  @lang('site.des_10')
 			  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
 			</p>
 		  </div>
@@ -311,11 +311,11 @@
 		<div class="swiper-slide">
 		  <div class="testimonial-item">
 			<img src="{{ asset('public/portal/assets/img/testimonials/testimonials-5.jpg')}}" class="testimonial-img" alt="">
-			<h3> عميل 2</h3>
-			<h4>مدير مصنع</h4>
+			<h3>  @lang('site.Customertow')</h3>
+			<h4> @lang('site.managerone')</h4>
 			<p>
 			  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-			 اوصى بالتعامل مع مصنع سابقه الحديث للزجاج والالمونيوم من حيث التعامل وكفاءه المنتجات 
+			  @lang('site.des_11')
 			  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
 			</p>
 		  </div>
@@ -402,9 +402,9 @@
   <div class="container">
 
 	<div class="section-title" data-aos="zoom-in">
-	  <h2>الأسألة الشائعة</h2>
-	  <h3>بعض <span>الأسألة الشائعة</span></h3>
-	  <p>تقديم المعلومة الدقيقة للجمهور وزيادة الوعي الإرشادي
+	  <h2>   @lang('site.question')</h2>
+	  <h3>@lang('site.some') <span>@lang('site.question') </span></h3>
+	  <p>@lang('site.des_12') 
 .</p>
 	</div>
 
@@ -439,11 +439,10 @@
   <div class="container">
 
 	<div class="section-title" data-aos="zoom-in">
-	  <h2>التواصل </h2>
-	  <h3>بإمكانك  <span>التواصل معنا</span> من هنا </h3>
-	  <p>نحن نستمع إليك. يرجى اختيار وسيلة الاتصال المفضلة لديك
-	  وسيقوم أحد موظفينا بالتواصل معك قريبًا. ... سوف يسعدنا أن نسمع صوتكِ
-.</p>
+	  <h2>@lang('site.communication')</h2>
+	  <h3>@lang('site.youcan')<span> @lang('site.Connectus')</span> @lang('site.from-here') </h3>
+	  <p>@lang('site.des_13') 
+</p>
 	</div>
 
 	<div>
@@ -458,19 +457,19 @@
 		<div class="info">
 		  <div class="address">
 			<i class="bi bi-geo-alt"></i>
-			<h4>العنوان:</h4>
+			<h4>@lang('site.the-address') </h4>
 			<p>  {{ $data->{'address_'.app()->getLocale()}  }}    </p>
 		  </div>
 
 		  <div class="email">
 			<i class="bi bi-envelope"></i>
-			<h4>الإيميل:</h4>
+			<h4>@lang('site.email')</h4>
 			<p>{{$settingData->email}}</p>
 		  </div>
 
 		  <div class="phone">
 			<i class="bi bi-phone"></i>
-			<h4>الهاتف:</h4>
+			<h4>@lang('site.phone')</h4>
 			<p>{{$settingData->phone}}</p>
 		  </div>
 
@@ -488,23 +487,23 @@
 		  <div class="row">
 			<div class="col-md-6 form-group">
 			  <input type="text" name="name" class="form-control" 
-			  id="name" placeholder="الاسم الثلاثي " required>
+			  id="name" placeholder=" @lang('site.name') " required>
 			</div>
 			<div class="col-md-6 form-group mt-3 mt-md-0">
 			  <input type="email" class="form-control"
-			   name="email" id="email" placeholder="البريد الألكتروني" required>
+			   name="email" id="email" placeholder=" @lang('site.email')" required>
 			</div>
 		  </div>
 		  <div class="form-group mt-3">
 			<input type="text" class="form-control" name="subject" 
-			id="subject" placeholder="الموضوع" required>
+			id="subject" placeholder="@lang('site.subject')" required>
 		  </div>
 		  <div class="form-group mt-3">
 			<textarea class="form-control" name="message" 
-			rows="5" placeholder="الرسالة" required></textarea>
+			rows="5" placeholder="@lang('site.message')" required></textarea>
 		  </div>
 		  <div class="my-3">
-		  <div class="text-center"><button type="submit" class="bb">ارسال</button></div>
+		  <div class="text-center"><button type="submit" class="bb">@lang('site.send')</button></div>
 		</form>
 
 	  </div>

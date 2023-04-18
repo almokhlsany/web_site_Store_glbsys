@@ -34,15 +34,18 @@ return [
     'des_7' => 'Our professional team increases productivity and cost-effectiveness in the market ',
     'des_8' => ' We provide services to individuals, companies and the government sector with a guarantee and high quality',
     'des_9' => 'By the grace and praise of God, work has been done with more than one party, including the installation of glass, aluminum and other projects.',
-	
+    'des_10' => 'One of the most wonderful factories that have been dealt with    ',
 
-	
-  
+    'des_11' => ' I recommend dealing with the previous factory for glass and aluminum in terms of handling and product efficiency',
+
+	'des_12' => 'Provide accurate information to the public and increase awareness',
+    'des_13' => 'We listen to you. Please choose your preferred method of communication
+    One of our employees will contact you shortly. ...we will be glad to hear your voice',
          //contact
          'with' => 'us',
          'contact' => 'Contact',
          'phone' => 'phone',
-         'location' => 'location ',
+         'the-address' => 'the address ',
          'inquiries' => 'inquiries',
          'name' => 'name',
          'email' => 'email',
@@ -57,8 +60,18 @@ return [
          'New_customer' => ' New customer',
          'factory' => 'factory ',
          'Highlights' => 'Highlights ',
+         'Customer' => 'Customer 1',
+         ' Customertow' => 'Customer 2',
 
+         'manager ' => '  Manager of a company ',
+         'managerone' => '  Factory Manager ',
+         'question' => 'frequently asked questions',
+         'some' => 'some',
+         'communication' => '  communication  ',
+         'from-here' => '   from here',
+         ' youcan' => ' You can',
 
+      
 
 
 
