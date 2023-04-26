@@ -29,15 +29,15 @@
   <!-- Template Main CSS File -->
   <link href="{{ asset('public/portal/assets/css/style.css')}}" rel="stylesheet">
   <style>
-    .bb{
+    .bb {
       background: #676ca0;
-    border: 0;
-    padding: 10px 24px;
-    color: #fff;
-    transition: 0.4s;
-    border-radius: 50px;
-}
-    </style>
+      border: 0;
+      padding: 10px 24px;
+      color: #fff;
+      transition: 0.4s;
+      border-radius: 50px;
+    }
+  </style>
 
   <!-- =======================================================
   * Template Name: Remember - v4.10.0
@@ -64,7 +64,7 @@
         <a href="{{ $settingData->instagram}}" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
         <a href="{{ $settingData->linkedin}}" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></i></a>
         <a href="#" class="info-icons"><i class="fas fa-language"></i></a>
-      
+
       </div>
     </div>
   </section>
@@ -76,7 +76,7 @@
       <div class="logo">
         <!--<h1 class="text-light"><a href="index.html">مصنع سابقة الحديث</a></h1>-->
         <!-- Uncomment below if you prefer to use an image logo -->
-         <a href="index.html"><img src="{{ URL ::to ('public/upload/'.$settingData->image)}}" alt="" class="img-fluid"></a>
+        <a href="index.html"><img src="{{ URL ::to ('public/upload/'.$settingData->image)}}" alt="" class="img-fluid"></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -86,14 +86,16 @@
           <li><a class="nav-link scrollto" href="{{ route('/homepage', app()->getLocale()) }}#services">@lang('site.OurServices')</a></li>
           <li><a class="nav-link scrollto " href="{{ route('/homepage', app()->getLocale()) }}#portfolio">@lang('site.OurProjects')</a></li>
           <li><a class="nav-link scrollto" href="{{ route('/homepage', app()->getLocale()) }}#team"> @lang('site.team')</a></li>
-          <div class=" nav-item dropdown">
-                                               <a class=" dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    {{ app()-> getLocale()=='ar'?'عربي':'English'}}
-                                               </a>
-                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                  <a class="dropdown-item"  href="{{url(app()->getLocale()=='ar'?'en':'ar')}}">{{ app()-> getLocale()=='ar'?'English':'عربي'}}</a>
-                                                </div>
-                                               </div>
+         <li> <a class="dropdown-item" href="{{url(app()->getLocale()=='ar'?'en':'ar')}}">{{ app()-> getLocale()=='ar'?'English':'عربي'}}</a></li>
+         
+          <!--div class=" nav-item dropdown">
+            <a class=" dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ app()-> getLocale()=='ar'?'عربي':'English'}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="{{url(app()->getLocale()=='ar'?'en':'ar')}}">{{ app()-> getLocale()=='ar'?'English':'عربي'}}</a>
+            </div>
+          </div-->
           <!---li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -118,10 +120,10 @@
 
     </div>
   </header><!-- End Header -->
-<!-- ======= Hero Section ======= -->
-<section id="hero">
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
     <div class="hero-container" data-aos="fade-up">
-      <h1>  @lang('site.des_1')    </h1>
+      <h1> @lang('site.des_1') </h1>
       <h2>@lang('site.des_2') </h2>
       <a href="#contact" class="btn-get-started scrollto"> @lang('site.Ordernow')</a>
     </div>
@@ -144,21 +146,20 @@
         <div class="row  justify-content-center">
           <div class="col-lg-6">
             <h3> @lang('site.Subscribeus') </h3>
-            <p>   @lang('site.des_3') </p>
+            <p> @lang('site.des_3') </p>
           </div>
         </div>
 
         <div class="row footer-newsletter justify-content-center">
           <div class="col-lg-6">
             <form action="" method="post">
-              <input type="email" name="email" 
-              placeholder="@lang('site.email')  " required><input type="submit" value=" @lang('site.Subscribeus') ">
+              <input type="email" name="email" placeholder="@lang('site.email')  " required><input type="submit" value=" @lang('site.Subscribeus') ">
             </form>
           </div>
         </div>
 
         <div class="social-links">
-        <a href="https://wa.me/{{ $settingData->phone	}}" class="twitter"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://wa.me/{{ $settingData->phone	}}" class="twitter"><i class="bx bxl-whatsapp"></i></a>
           <a href="{{ $settingData->twitter	}}" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="{{ $settingData->facebook}}" class="facebook"><i class="bx bxl-facebook"></i></a>
           <a href="{{ $settingData->instagram}}" class="instagram"><i class="bx bxl-instagram"></i></a>
@@ -170,14 +171,14 @@
 
     <div class="container footer-bottom clearfix">
       <div class="copyright">
-      @lang('site.copyright')  <strong><span> @lang('site.CompanyName') </span></strong>. 
+        @lang('site.copyright') <strong><span> @lang('site.CompanyName') </span></strong>.
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/ -->
-          @lang('site.Designedby')  <a href="#"> @lang('site.CompanyName') </a>
+        @lang('site.Designedby') <a href="#"> @lang('site.CompanyName') </a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -186,8 +187,9 @@
 
   <!-- Vendor JS Files -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>      <script src="{{ asset('public/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="{{ asset('public/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{ asset('public/portal/assets/vendor/purecounter/purecounter_vanilla.js')}}"></script>
   <script src="{{ asset('public/portal/assets/vendor/aos/aos.js')}}"></script>
   <script src="{{ asset('public/portal/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -202,5 +204,3 @@
 </body>
 
 </html>
-
-

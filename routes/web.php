@@ -37,15 +37,12 @@ Route::post('/contactUsForm', [IndexController::class, 'ContactUsForm']);
 Route::group(['prefix' => '{locale}','where' => ['locale' => '[a-z]{2}'],
 'middleware' => 'setLocale'],
  function () {
-    Route::get('/', function () {
-        return view('Home');
-       })->name('/homepage');
+    Route::get('/',  [IndexController::class, 'Home'])->name('/homepage');
 
-
-
-
-  
 });
+
+
+
 //Admin
 Auth::routes();
 Route::group(['prefix' => 'admin'], function () {
