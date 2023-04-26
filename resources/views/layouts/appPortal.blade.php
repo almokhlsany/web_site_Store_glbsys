@@ -86,7 +86,8 @@
           <li><a class="nav-link scrollto" href="{{ route('/homepage', app()->getLocale()) }}#services">@lang('site.OurServices')</a></li>
           <li><a class="nav-link scrollto " href="{{ route('/homepage', app()->getLocale()) }}#portfolio">@lang('site.OurProjects')</a></li>
           <li><a class="nav-link scrollto" href="{{ route('/homepage', app()->getLocale()) }}#team"> @lang('site.team')</a></li>
-         <li> <a class="dropdown-item" href="{{url(app()->getLocale()=='ar'?'en':'ar')}}">{{ app()-> getLocale()=='ar'?'English':'عربي'}}</a></li>
+          <li><a class="nav-link scrollto" href="#contact"> @lang('site.Connectus')</a></li>
+          <li> <a class="dropdown-item" href="{{url(app()->getLocale()=='ar'?'en':'ar')}}">{{ app()-> getLocale()=='ar'?'English':'عربي'}}</a></li>
          
           <!--div class=" nav-item dropdown">
             <a class=" dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -113,7 +114,7 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li-->
-          <li><a class="nav-link scrollto" href="#contact"> @lang('site.Connectus')</a></li>
+         
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
