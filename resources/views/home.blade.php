@@ -46,7 +46,7 @@
                                 <div class="stat-widget-two">
                                     <div class="media">
                                         <div class="media-body">
-                                            <h2 class="mt-0 mb-1 text-info">{{$userCount}}</h2><span class="">Total Users</span>
+                                            <h2 class="mt-0 mb-1 text-info">0</h2><span class="">Total Users</span>
                                         </div>
                                         <img class="ml-3" src="{{ asset('admin/assets/images/icons/1.png')}}" alt="">
                                     </div>
@@ -60,7 +60,7 @@
                                 <div class="stat-widget-two">
                                     <div class="media">
                                         <div class="media-body">
-                                            <h2 class="mt-0 mb-1 text-danger">{{$catCount}}</h2><span class="">Total Categories</span>
+                                            <h2 class="mt-0 mb-1 text-danger">0</h2><span class="">Total Categories</span>
                                         </div>
                                         <img class="ml-3" src="{{ asset('admin/assets/images/icons/2.png')}}" alt="">
                                     </div>
@@ -74,7 +74,7 @@
                                 <div class="stat-widget-two">
                                     <div class="media">
                                         <div class="media-body">
-                                            <h2 class="mt-0 mb-1 text-warning">{{$pagesCount}}</h2>
+                                            <h2 class="mt-0 mb-1 text-warning">0</h2>
                                             <span class="">Total Pages</span>
                                         </div>
                                         <img class="ml-3" src="{{ asset('admin/assets/images/icons/3.png')}}" alt="">
