@@ -476,11 +476,9 @@
 		</div>
 
 	  </div>
-
+	
 	  <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
-	  @if(Session::has('flash_message'))
-            <p class="alert alert-info">{{ Session::get('flash_message') }}</p>
-            @endif
+	
 		<form  enctype="multipart/form-data" method="post"
                    action="{{ URL :: to ('/contactUsForm')}}" >
 		{{ csrf_field() }}
@@ -515,8 +513,13 @@
                                         @endif
 		  </div>
 		  <div class="my-3">
-                <div class="error-message"></div>
+                <div class="error-message">
+				@if(Session::has('flash_message'))
+            <p class="alert alert-info">{{ Session::get('flash_message') }}</p>
+            @endif
+				</div>
               </div>
+		 
 		  <div class="text-center"><button type="submit" class="bb">@lang('site.send')</button></div>
 		</form>
 
