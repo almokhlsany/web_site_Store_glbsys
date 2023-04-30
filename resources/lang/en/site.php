@@ -61,15 +61,15 @@ return [
          'factory' => 'factory ',
          'Highlights' => 'Highlights ',
          'Customer' => 'Customer 1',
-         ' Customertow' => 'Customer 2',
-
-         'manager ' => '  Manager of a company ',
-         'managerone' => '  Factory Manager ',
+         'Customertow' => 'Customer 2',
+         'manager' => 'Manager of a company ',
+         'managerone' => 'Factory Manager ',
          'question' => 'frequently asked questions',
          'some' => 'some',
          'communication' => '  communication  ',
          'from-here' => '   from here',
-         ' youcan' => ' You can',
+         'youcan' => 'You can',
+         'all' => 'all',
 
       
 

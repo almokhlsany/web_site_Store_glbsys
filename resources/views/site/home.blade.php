@@ -168,7 +168,7 @@
 	<div class="row">
 	  <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up">
 		<ul id="portfolio-flters">
-		  <li data-filter="*" class="filter-active">الكل</li>
+		  <li data-filter="*" class="filter-active">@lang('site.all')</li>
 		  @foreach($allCat as $data)
 		  <li data-filter=".filter-{{ $data->id}} ">{{ $data->{'name_'.app()->getLocale()}  }}  </li>
 		  @endforeach

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="{{App()->getLocale()}}" dir="{{App::isLocale('ar')?'rtl':'ltr'}}" >
 
 <head>
   <meta charset="utf-8">
@@ -18,7 +18,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Almarai&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS Files
+ @if(app()->getLocale()=='ar')
+     <link href="{{ asset('public/portal/assets/vendor/bootstrap/css/bootstrap.rtl.min.css')}}" rel="stylesheet">
+     @else
+     <link href="{{ asset('public/portal/assets/vendor/bootstrap/css/bootstrap.ltr.min.css')}}" rel="stylesheet">
+   @endif
+ -->
+
   <link href="{{ asset('public/portal/assets/vendor/aos/aos.css')}}" rel="stylesheet">
   <link href="{{ asset('public/portal/assets/vendor/bootstrap/css/bootstrap.rtl.min.css')}}" rel="stylesheet">
   <link href="{{ asset('public/portal/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
@@ -47,7 +54,7 @@
   ======================================================== -->
 </head>
 
-<body dir="rtl">
+<body >
 
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center">

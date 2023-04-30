@@ -64,8 +64,8 @@ return [
 
         'Customertow' => 'عميل 2',
 
-        'manager' => ' مدير شركه ',
-        'managerone ' => ' مدير  مصنع ',
+        'manager' => 'مدير شركه ',
+        'managerone' => 'مدير  مصنع',
         'communication' => '  التواصل  ',
         'from-here' => '  من هنا',
         'youcan' => ' بإمكانك',
@@ -86,5 +86,6 @@ return [
         'question' =>'الأسألة الشائعة',
       
         'some' => 'بعض',
+        'all' => 'الكل',
 
     ];
