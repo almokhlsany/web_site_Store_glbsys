@@ -481,28 +481,42 @@
 	  @if(Session::has('flash_message'))
             <p class="alert alert-info">{{ Session::get('flash_message') }}</p>
             @endif
-		<form action="{{ URL :: to ('/contactUsForm')}}"
-		 method="post" role="form" >
+		<form  enctype="multipart/form-data" method="post"
+                   action="{{ URL :: to ('/contactUsForm')}}" >
 		{{ csrf_field() }}
 		  <div class="row">
 			<div class="col-md-6 form-group">
 			  <input type="text" name="name" class="form-control" 
 			  id="name" placeholder=" @lang('site.name') " required>
+			  @if($errors->has('name'))
+                                        <div class="error">{{ $errors->first('name') }}</div>
+                                        @endif
 			</div>
 			<div class="col-md-6 form-group mt-3 mt-md-0">
 			  <input type="email" class="form-control"
 			   name="email" id="email" placeholder=" @lang('site.email')" required>
+			   @if($errors->has('email'))
+                                        <div class="error">{{ $errors->first('email') }}</div>
+                                        @endif
 			</div>
 		  </div>
 		  <div class="form-group mt-3">
 			<input type="text" class="form-control" name="subject" 
 			id="subject" placeholder="@lang('site.subject')" required>
+			@if($errors->has('subject'))
+                                        <div class="error">{{ $errors->first('subject') }}</div>
+                                        @endif
 		  </div>
 		  <div class="form-group mt-3">
 			<textarea class="form-control" name="message" 
 			rows="5" placeholder="@lang('site.message')" required></textarea>
+			@if($errors->has('message'))
+                                        <div class="error">{{ $errors->first('message') }}</div>
+                                        @endif
 		  </div>
 		  <div class="my-3">
+                <div class="error-message"></div>
+              </div>
 		  <div class="text-center"><button type="submit" class="bb">@lang('site.send')</button></div>
 		</form>
 
